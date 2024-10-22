@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Create Rule{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Create Rule</h1>
+    <form id="create-rule-form" method="POST" class="rule-form">
+        <div class="mb-3">
+            <label for="name" class="form-label">Rule Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="rule_string" class="form-label">Rule String</label>
+            <input type="text" class="form-control" id="rule_string" name="rule_string" required>
+            <small class="form-text text-muted">
+                Example: ((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)
+            </small>
+        </div>
+        <div id="error-message" class="error mb-3"></div>
+        <button type="submit" class="btn btn-primary">Create Rule</button>
+    </form>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{{ url_for('static', filename='js/create_rule.js') }}"></script>
+{% endblock %}

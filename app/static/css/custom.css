@@ -1,0 +1,29 @@
+.rule-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.rule-list {
+    margin-top: 20px;
+}
+
+.rule-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.evaluation-result {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+}

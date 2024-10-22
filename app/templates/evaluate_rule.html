@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Evaluate Rule{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Evaluate Rule: {{ rule.name }}</h1>
+    <p>{{ rule.description }}</p>
+
+    <form id="evaluate-rule-form" method="POST">
+        <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input type="number" class="form-control" id="age" name="age" required>
+        </div>
+        <div class="mb-3">
+            <label for="department" class="form-label">Department</label>
+            <input type="text" class="form-control" id="department" name="department" required>
+        </div>
+        <div class="mb-3">
+            <label for="salary" class="form-label">Salary</label>
+            <input type="number" class="form-control" id="salary" name="salary" required>
+        </div>
+        <div class="mb-3">
+            <label for="experience" class="form-label">Experience (years)</label>
+            <input type="number" class="form-control" id="experience" name="experience" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Evaluate</button>
+    </form>
+
+    <div id="evaluation-result" class="evaluation-result mt-4"></div>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{{ url_for('static', filename='js/evaluate_rule.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Rule Engine</h1>
+    <div class="rule-list">
+        {% for rule in rules %}
+            <div class="rule-item">
+                <h3>{{ rule.name }}</h3>
+                <p>{{ rule.description }}</p>
+                <a href="{{ url_for('main.evaluate_rule_route', rule_id=rule._id) }}" class="btn btn-primary">Evaluate</a>
+            </div>
+        {% else %}
+            <p>No rules found. <a href="{{ url_for('main.create_rule_route') }}">Create a new rule</a>.</p>
+        {% endfor %}
+    </div>
+{% endblock %}

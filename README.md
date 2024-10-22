@@ -17,8 +17,8 @@ A flexible and powerful rule engine application that uses Abstract Syntax Trees 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/rule-engine.git
-cd rule-engine
+https://github.com/vaibhavipawa/Rule-Engine-AST.git
+cd Rule-Engine-AST
 ```
 
 2. Create and activate a virtual environment:

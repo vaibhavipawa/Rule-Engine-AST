@@ -1,6 +1,6 @@
 # Rule Engine with AST
 
-A flexible and powerful rule engine application built with Flask that uses Abstract Syntax Trees (AST) to represent and evaluate conditional rules. This system allows for dynamic creation, combination, and modification of business rules based on various attributes like age, department, income, etc.
+A flexible and powerful rule engine application that uses Abstract Syntax Trees (AST) to represent and evaluate conditional rules. This system allows for dynamic creation, combination, and modification of business rules based on various attributes like age, department, income, etc.
 
 ## Features
 
